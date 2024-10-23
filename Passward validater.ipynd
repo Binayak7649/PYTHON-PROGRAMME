@@ -1,0 +1,32 @@
+##    Passward programe 
+a = input('enter password ')
+if len(a)>= 6 and len(a)<=12:
+    has_lower = False
+    has_upper = False
+    has_numer = False
+    has_spec = False
+    for i in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+        if i not in a:
+            has_upper =  True
+    for i in "abcdefghijklmnopqrstuvwxyz":
+        if i not in a:
+            has_lower =  True
+            
+    for i in "1234567890":
+        if i not in a:
+            has_numer =  True
+    for i in "~!@#$%^&*()_+{[}].?>`=-</\ ":
+        if i not in a:
+            has_spec =  True
+    if has_lower and has_numer and has_upper and has_spec:
+        print('Password ok')
+    else:
+        print(has_lower)
+        print(has_upper)
+        print(has_numer)
+        print(has_spec)
+        print('Password is not correct')
+else:
+    print('Must be more than 5 char and less than 13')
+    
+    
